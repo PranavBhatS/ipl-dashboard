@@ -1,0 +1,27 @@
+.homePage {
+   overflow: auto;
+   height: 100vh;
+}
+.header-section {
+   background-color: $color-gray-light-1;
+   padding: 1rem;
+   position: fixed;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 10;
+   .app__name {
+      text-align: center;
+   }
+}
+
+.team-grid {
+   margin: 7rem 0;
+   display: grid;
+   grid-template-rows: auto;
+   grid-auto-flow: dense;
+   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   gap: 40px 20px;
+   padding: 0 1rem;
+}

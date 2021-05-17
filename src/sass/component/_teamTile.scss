@@ -1,0 +1,37 @@
+.team-tile {
+   background-color: rgba($color-white, 0.8);
+   font-size: 1.5rem;
+   padding: 2.5rem;
+   text-align: center;
+   border-radius: 3px;
+   box-shadow: 0 1.5rem 4rem rgba($color-primary-dark, $alpha: 0.25);
+   transition: transform 0.3s;
+   backface-visibility: hidden;
+   animation-duration: 2s;
+   animation-delay: 2s;
+   animation-fill-mode: backwards;
+   &:nth-child(odd) {
+      animation-name: moveInLeft;
+   }
+   &:nth-child(even) {
+      animation-name: moveInRight;
+   }
+   &__icon {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      background: $color-primary-dark;
+      color: $color-white;
+      padding: 1rem;
+      clip-path: circle();
+   }
+   &:hover {
+      transform: translateY(-1rem) scale(1.06);
+   }
+   &__text {
+      background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+   }
+}
